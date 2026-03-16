@@ -1,11 +1,11 @@
-# mandarparab.github.io
+# m-np.github.io
 
 Personal website for Mandar Parab — ML Engineer, AI Researcher.
 
 ## Deploy to GitHub Pages in 5 minutes
 
 ### 1. Create the repository
-- Go to github.com and create a new repository named exactly: `mandarparab.github.io`
+- Go to github.com and create a new repository named exactly: `m-np.github.io`
 - Make it **public**
 - Don't initialize with a README
 
@@ -15,7 +15,7 @@ git init
 git add index.html README.md
 git commit -m "initial site"
 git branch -M main
-git remote add origin https://github.com/mandarparab/mandarparab.github.io.git
+git remote add origin https://github.com/m-np/m-np.github.io/
 git push -u origin main
 ```
 
@@ -25,7 +25,7 @@ git push -u origin main
 - Branch: `main` / `/ (root)`
 - Save
 
-Your site will be live at **https://mandarparab.github.io** within ~2 minutes.
+Your site will be live at **https://m-np.github.io** within ~2 minutes.
 
 ---
 
@@ -47,7 +47,7 @@ Your site will be live at **https://mandarparab.github.io** within ~2 minutes.
 Create separate HTML files using the same layout — copy `index.html`, update the `<main>` content, and update the nav `class="active"` to the correct link.
 
 ```
-mandarparab.github.io/
+m-np.github.io/
 ├── index.html          ← homepage (this file)
 ├── research.html       ← detailed research page
 ├── writing.html        ← all articles and posts
@@ -58,9 +58,9 @@ mandarparab.github.io/
 
 ## Custom domain (optional)
 
-If you buy `mandarparab.com`:
-1. In repo root, create a file called `CNAME` containing just: `mandarparab.com`
-2. In your domain registrar, add a CNAME record: `www` → `mandarparab.github.io`
+If you buy `m-np.com`:
+1. In repo root, create a file called `CNAME` containing just: `m-np.com`
+2. In your domain registrar, add a CNAME record: `www` → `m-np.github.io`
 3. In GitHub Pages settings, enter your custom domain
 
 ---
