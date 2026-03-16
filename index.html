@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mandar Parab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=Source+Sans+3:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text: #1a1a1a;
+      --text-muted: #555;
+      --text-light: #888;
+      --border: #ddd;
+      --bg: #fff;
+      --link: #1a1a1a;
+    }
+
+    body {
+      font-family: 'Source Sans 3', Georgia, sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    /* ── Nav ── */
+    .topnav {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+      margin-bottom: 2.5rem;
+    }
+
+    .topnav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    .topnav a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-decoration: none;
+      padding: 4px 14px;
+      letter-spacing: 0.02em;
+    }
+
+    .topnav a:first-child { padding-left: 0; }
+    .topnav a:hover, .topnav a.active { color: var(--text); }
+
+    /* ── Layout ── */
+    .layout {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      position: sticky;
+      top: 1.5rem;
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: #f0ede8;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    /* Swap the initials div for <img> once you have a photo:
+       <img src="images/profile.jpg" alt="Mandar Parab" style="width:100%;height:100%;object-fit:cover;"> */
+    .avatar-initials {
+      font-size: 42px;
+      font-weight: 300;
+      color: var(--text-muted);
+      font-family: 'Source Serif 4', Georgia, serif;
+    }
+
+    .sidebar-name {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 2px;
+    }
+
+    .sidebar-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .sidebar-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .sidebar-meta-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 5px;
+    }
+
+    .sidebar-links {
+      list-style: none;
+      font-size: 13px;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .sidebar-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .sidebar-links a:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    /* ── Main ── */
+    .main p {
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+
+    .main h2 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 20px;
+      font-weight: 400;
+      margin: 2.2rem 0 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .main a {
+      color: var(--link);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .main a:hover { opacity: 0.65; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.5rem 0;
+    }
+
+    .main ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .main ul li {
+      font-weight: 300;
+      margin-bottom: 0.4rem;
+    }
+
+    .main ul li strong { font-weight: 500; }
+
+    /* ── Research papers ── */
+    .paper {
+      margin-bottom: 1.4rem;
+      padding-bottom: 1.4rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .paper:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .paper-title {
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 2px;
+    }
+
+    .paper-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: 5px;
+    }
+
+    .paper-meta a {
+      color: var(--text-muted);
+    }
+
+    .paper-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: 1.65;
+    }
+
+    /* ── Contact ── */
+    .contact-line {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 300;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 3rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 11px;
+      color: var(--text-light);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .avatar { width: 120px; height: 120px; }
+      .topnav a { font-size: 12px; padding: 4px 8px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="topnav">
+    <ul>
+      <li><a href="index.html" class="active">Mandar Parab's Homepage</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <div class="layout">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar">
+      <div class="avatar">
+        <!-- Replace with: <img src="images/profile.jpg" alt="Mandar Parab" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"> -->
+        <span class="avatar-initials">MP</span>
+      </div>
+
+      <div class="sidebar-name">Mandar Parab</div>
+      <div class="sidebar-sub">
+        ML Engineer · Meta<br>
+        AI Researcher
+      </div>
+
+      <div class="sidebar-meta">
+        <div class="sidebar-meta-item">
+          <span>📍</span>
+          <span>Menlo Park, CA</span>
+        </div>
+        <div class="sidebar-meta-item">
+          <span>🎓</span>
+          <span>M.S. EE, Penn State '17</span>
+        </div>
+      </div>
+
+      <ul class="sidebar-links">
+        <li><a href="https://www.linkedin.com/in/mandar-parab" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/m-np" target="_blank">GitHub</a></li>
+        <li><a href="https://huggingface.co/Rzoro" target="_blank">HuggingFace</a></li>
+        <li><a href="https://scholar.google.com/citations?user=GoEEL2kAAAAJ&hl=en" target="_blank">Google Scholar</a></li>
+        <li><a href="https://arxiv.org/abs/2601.00885" target="_blank">arXiv</a></li>
+        <li><a href="mailto:mandar4g@gmail.com">mandar4g@gmail.com</a></li>
+      </ul>
+    </aside>
+
+    <!-- ── Main content ── -->
+    <main class="main">
+
+      <p>Hi, I'm Mandar.</p>
+
+      <p>
+        I'm an ML Engineer at Meta working on LLaMA-based ranking systems serving billions of daily impressions. Before that: recommendation and speech systems for millions of kids at Epic!, demand forecasting at Levi's, and traffic simulation for autonomous vehicles at NIO.
+      </p>
+
+      <p>
+        My research interest is one question: <strong>how do we build AI systems that can explain their own reasoning before we trust them in production?</strong>
+      </p>
+
+      <hr>
+
+      <p>
+        I recently published <a href="https://arxiv.org/abs/2601.00885" target="_blank">Counterfactual Self-Questioning (CSQ)</a> — a framework where a single LLM generates counterfactual critiques of its own reasoning as a policy optimization signal, removing the need for external reward models or multiple agents. It integrates with GRPO and achieves <strong>+6.7 to +12.4 points over chain-of-thought</strong> on GSM8K, MATH, and Minerva-style benchmarks.
+      </p>
+
+      <p>
+        I'm also advising (pro bono) on AI strategy for the Western Cape Government in South Africa — scaling from ~10K internal users to 100K+ public-facing citizens. The platform was accepted by the Infrastructure Department and more departments are now in discussions.
+      </p>
+
+      <p>
+        In 2026 I received the <strong>Global Recognition Award</strong> for contributions to AI systems in public-sector and consumer-scale applications. Also been featured in Forbes twice, which is still a little surreal.
+      </p>
+
+      <hr>
+
+      <!-- ── Research ── -->
+      <h2 id="research">Research</h2>
+
+      <div class="paper">
+        <div class="paper-title">Counterfactual Self-Questioning for LLM Reasoning (CSQ)</div>
+        <div class="paper-meta">Preprint · 2025 · <a href="https://arxiv.org/abs/2601.00885" target="_blank">arxiv:2601.00885</a></div>
+        <div class="paper-desc">A single LLM critiques its own reasoning counterfactually as a GRPO policy signal — no external reward model needed. +6.7–12.4 pts over chain-of-thought on GSM8K, MATH, and Minerva. Integrates directly with GRPO.</div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">Debate Agents for Explainable AI</div>
+        <div class="paper-meta">Active project</div>
+        <div class="paper-desc">Multi-agent LLM systems where agents critique each other's outputs to produce more reliable and interpretable results. Modular, tool-augmented implementations benchmarked against GSM8K and ARC with custom eval frameworks.</div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">Learning Retrieval Policies for RAG Systems</div>
+        <div class="paper-meta">Active project</div>
+        <div class="paper-desc">Using RL to optimize document retrieval strategies across dense, sparse, and reranked methods. Building experimental environments to evaluate retrieval policy quality end-to-end.</div>
+      </div>
+
+      <div class="paper">
+        <div class="paper-title">Counterfactual Reasoning for Vision-Language Models</div>
+        <div class="paper-meta">Active project</div>
+        <div class="paper-desc">Extending CSQ to VLMs for improved reasoning reliability on multimodal tasks — VQA and ScienceQA.</div>
+      </div>
+
+      <!-- ── Writing ── -->
+      <h2 id="writing">Writing</h2>
+
+      <ul>
+        <li>
+          <a href="https://dzone.com/articles/context-engineering-the-missing-layer-for-enterpri" target="_blank">Context Engineering: The Missing Layer for Enterprise AI</a>
+          — DZone
+        </li>
+        <li>
+          <a href="https://hackernoon.com/chunking-in-rag-the-key-to-efficient-accurate-retrieval" target="_blank">Chunking in RAG: The Key to Efficient, Accurate Retrieval</a>
+          — HackerNoon
+        </li>
+      </ul>
+
+      <!-- ── Projects ── -->
+      <h2 id="projects">Things I've shipped</h2>
+
+      <ul>
+        <li>Non-personalized <strong>LLaMA ranking models for Meta Ads</strong> at ~2K RPS, billions of daily impressions — strict privacy constraints throughout</li>
+        <li><strong>MTML ranking models for Meta Reels</strong>, jointly optimizing engagement across video and photo content</li>
+        <li><strong>Explainable AI methods for ranking</strong> — interpretable insights preserving causal relationships and privacy</li>
+        <li><strong>Demand forecasting systems at Levi's</strong> across thousands of retail locations and seasonal cycles globally</li>
+        <li>Graph-based and deep learning <strong>rec systems (RippleNet, Wide &amp; Deep, Deep &amp; Cross)</strong> for 5M+ K-12 readers</li>
+        <li><strong>TTS systems (Tacotron2, FastPitch)</strong> powering read-to-me on a children's platform</li>
+        <li><strong>Traffic simulation environments</strong> with up to 100 simultaneous vehicles for AV validation at NIO</li>
+        <li><strong>Multi-agent AI architecture</strong> for a government platform now adopted across multiple South African departments</li>
+      </ul>
+
+      <h2>Models on HuggingFace</h2>
+
+      <p>
+        Experiments and checkpoints are public on <a href="https://huggingface.co/Rzoro" target="_blank">HuggingFace (Rzoro)</a> — including a GRPO LoRA fine-tuned on GSM8K, an OGB-DDI link prediction model, and several multiple-choice classification checkpoints from ongoing research.
+      </p>
+
+      <hr>
+
+      <p class="contact-line">
+        LinkedIn for the CV: <a href="https://www.linkedin.com/in/mandar-parab" target="_blank">linkedin.com/in/mandar-parab</a><br>
+        mandar4g [at] gmail [dot] com &nbsp;·&nbsp; +1 814-862-8515
+      </p>
+
+    </main>
+  </div>
+
+  <div class="footer">
+    &copy; 2026 Mandar Parab &nbsp;·&nbsp; Menlo Park, CA
+  </div>
+
+</div>
+</body>
+</html>
