@@ -4,21 +4,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Mandar Narendra Parab</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link
     href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&family=Source+Sans+3:wght@300;400;500&display=swap"
     rel="stylesheet" />
+
   <link rel="stylesheet" href="css/style.css" />
+
 </head>
 
 <body>
+
   <div class="wrap">
+
+    <!-- NAVIGATION -->
 
     <nav class="topnav">
       <ul>
-        <li><a href="index.html" class="active">Mandar Narendra Parab</a></li>
+        <li><a href="index.html" class="active">Mandar Parab</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="writing.html">Writing</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -26,81 +34,183 @@
       </ul>
     </nav>
 
+
     <div class="layout">
 
+      <!-- SIDEBAR -->
+
       <aside class="sidebar">
+
         <div class="avatar">
-          <!-- Add your photo: replace the span below with
-             <img src="images/profile.jpg" alt="Mandar Narendra Parab"> -->
           <img src="images/profile.jpg" alt="Mandar Narendra Parab">
         </div>
-        <div class="sidebar-name">Mandar Narendra Parab</div>
-        <div class="sidebar-sub">ML Engineer · Meta<br>AI Researcher</div>
-        <div class="sidebar-meta">
-          <div class="sidebar-meta-item"><span>📍</span><span>Menlo Park, CA</span></div>
-          <div class="sidebar-meta-item"><span>🎓</span><span>M.S. EE, Penn State '17</span></div>
+
+        <div class="sidebar-name">
+          Mandar Narendra Parab
         </div>
+
+        <div class="sidebar-sub">
+          AI Researcher · ML Systems Engineer
+        </div>
+
+        <div class="sidebar-meta">
+
+          <div class="sidebar-meta-item">
+            <span>📍</span>
+            <span>Menlo Park, CA</span>
+          </div>
+
+          <div class="sidebar-meta-item">
+            <span>🎓</span>
+            <span>M.S. EE, Penn State</span>
+          </div>
+
+        </div>
+
+
         <ul class="sidebar-links">
-          <li><a href="https://www.linkedin.com/in/mandar-parab" target="_blank">LinkedIn</a></li>
+
+          <li><a href="https://www.linkedin.com/in/mandar-parab-11560974/" target="_blank">LinkedIn</a></li>
+
           <li><a href="https://github.com/m-np" target="_blank">GitHub</a></li>
+
           <li><a href="https://huggingface.co/Rzoro" target="_blank">HuggingFace</a></li>
+
           <li><a href="https://scholar.google.com/citations?user=GoEEL2kAAAAJ&hl=en" target="_blank">Google Scholar</a>
           </li>
+
           <li><a href="https://arxiv.org/abs/2601.00885" target="_blank">arXiv</a></li>
+
           <li><a href="mailto:mandar4g@gmail.com">mandar4g@gmail.com</a></li>
+
         </ul>
+
       </aside>
 
+
+
+      <!-- MAIN CONTENT -->
+
       <main class="main">
-        <p>Hi, I'm Mandar.</p>
+
+        <p><strong>I build AI systems that can critique their own reasoning before humans need to.</strong></p>
+
 
         <p>
-          I'm an ML Engineer at Meta working on LLaMA-based ranking systems serving billions of daily impressions.
-          Before that: recommendation and speech systems for millions of kids at Epic!, demand forecasting at Levi's,
-          and traffic simulation for autonomous vehicles at NIO.
+          Hi, I'm Mandar — a machine learning engineer and researcher working on large-scale AI systems and
+          reasoning-based language models.
         </p>
 
+
         <p>
-          My research interest is one question: <strong>how do we build AI systems that can explain their own
-            reasoning before we trust them in production?</strong>
+          My work sits at the intersection of <strong>production-scale machine learning</strong> and
+          <strong>research on explainable reasoning systems</strong>.
+          I currently work on LLM-powered ranking systems serving billions of daily impressions.
         </p>
+
+
+        <p>
+          Previously, I built recommendation and speech systems for millions of children at
+          <strong>Epic!</strong>, demand forecasting models for <strong>Levi Strauss</strong>,
+          and traffic simulation environments for autonomous vehicles at <strong>NIO</strong>.
+        </p>
+
 
         <hr>
 
+
         <p>
-          I recently published <a href="https://arxiv.org/abs/2601.00885" target="_blank">Counterfactual
-            Self-Questioning (CSQ)</a> — a framework where a single LLM generates counterfactual critiques of its
-          own reasoning as a policy optimization signal, removing the need for external reward models or multiple
-          agents. It integrates with GRPO and achieves <strong>+6.7 to +12.4 points over chain-of-thought</strong>
-          on GSM8K, MATH, and Minerva-style benchmarks.
+          My research asks a simple question:
         </p>
 
         <p>
-          I'm also advising (pro bono) on AI strategy for the Western Cape Government in South Africa — scaling
-          from ~10K internal users to 100K+ public-facing citizens. The platform was accepted by the Infrastructure
-          Department and more departments are now in discussions.
+          <strong>How can AI systems critique their own reasoning before humans need to?</strong>
         </p>
 
+
         <p>
-          In 2026 I received the <strong>Global Recognition Award</strong> for contributions to AI systems in
-          public-sector and consumer-scale applications. Also been featured in Forbes twice, which is still
-          a little surreal.
+          I study methods such as self-questioning agents, debate-based reasoning, and reinforcement
+          learning from model critique to build more reliable language models.
         </p>
+
 
         <hr>
 
+
         <p>
-          Here's my <a href="research.html">research</a>,
+          I recently published
+          <a href="https://arxiv.org/abs/2601.00885" target="_blank">
+            Counterfactual Self-Questioning (CSQ)
+          </a>
+          — a framework where a language model critiques its own reasoning by generating
+          counterfactual alternatives.
+        </p>
+
+
+        <p>
+          The approach integrates with GRPO-style optimization and improves reasoning performance
+          by <strong>+6.7 to +12.4 points</strong> over chain-of-thought on GSM8K, MATH,
+          and Minerva-style benchmarks.
+        </p>
+
+
+        <hr>
+
+
+        <p>
+          I also advise (pro bono) on AI strategy for the Western Cape Government in South Africa,
+          helping design a multi-agent platform that scales from internal government use
+          (~10K users) to public-facing services for over 100K citizens.
+        </p>
+
+
+        <p>
+          In 2026 I received the <strong>Global Recognition Award</strong> for contributions to AI systems
+          deployed in public-sector and large-scale consumer environments.
+        </p>
+
+
+        <hr>
+
+
+        <p><strong>Research Themes</strong></p>
+
+        <ul>
+
+          <li>Explainable AI and reasoning systems</li>
+
+          <li>Self-critiquing language models</li>
+
+          <li>Agentic AI and multi-agent reasoning</li>
+
+          <li>Large-scale ML systems</li>
+
+        </ul>
+
+
+        <hr>
+
+
+        <p>
+          You can explore my
+          <a href="research.html">research</a>,
           <a href="writing.html">writing</a>,
-          and <a href="projects.html">things I've shipped</a>.
+          and <a href="projects.html">projects</a>.
         </p>
+
+
       </main>
 
     </div>
 
-    <div class="footer">&copy; 2026 Mandar Narendra Parab &nbsp;·&nbsp; Menlo Park, CA</div>
+
+    <div class="footer">
+      &copy; 2026 Mandar Narendra Parab · Menlo Park, CA
+    </div>
+
 
   </div>
+
 </body>
 
 </html>
